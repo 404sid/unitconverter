@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <!-- Heading of the Page -->
+        <h1>Unit Converter</h1>
+        <!-- Taking Input-->
+        <form action="/convert" method="post">
+            <label for="value">Value:</label>
+            <input type="text" id="value" name="value" required>
+            
+            <label for="from_unit">From Unit:</label>
+            <select id="from_unit" name="from_unit">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="square_meter">Square Meter</option>
+                <option value="square_foot">Square Foot</option>
+                <option value="kilogram">Kilogram</option>
+                <option value="pound">Pound</option>
+            </select>
+            
+            <label for="to_unit">To Unit:</label>
+            <select id="to_unit" name="to_unit">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="square_meter">Square Meter</option>
+                <option value="square_foot">Square Foot</option>
+                <option value="kilogram">Kilogram</option>
+                <option value="pound">Pound</option>
+            </select>
+            
+            <input type="submit" value="Convert">
+        </form>
+
+
+        <div id="result">
+            <!-- Conversion result will be displayed here -->
+        </div>
+    </div>
+
+
+</body>
+</html>
